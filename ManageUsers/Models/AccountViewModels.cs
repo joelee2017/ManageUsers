@@ -69,6 +69,10 @@ namespace ManageUsers.Models
         [Display(Name = "電子郵件")]
         public string Email { get; set; }
 
+        [StringLength(3,ErrorMessage ="{0}最多三個字元")]
+        [Display(Name ="國別碼")]
+        public string CountryCode { get; set; }
+
         [Required]
         [StringLength(100, ErrorMessage = "{0} 的長度至少必須為 {2} 個字元。", MinimumLength = 6)]
         [DataType(DataType.Password)]
