@@ -48,10 +48,16 @@ namespace ManageUsers.Models
 
     public class LoginViewModel
     {
+
+
         [Required]
-        [Display(Name = "電子郵件")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "帳號")]
+        public string UserName { get; set; }
+
+        //[Required]
+        //[Display(Name = "電子郵件")]
+        //[EmailAddress]
+        //public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -68,6 +74,10 @@ namespace ManageUsers.Models
         [EmailAddress]
         [Display(Name = "電子郵件")]
         public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "帳號")]
+        public string UserName { get; set; }
 
         [StringLength(3,ErrorMessage ="{0}最多三個字元")]
         [Display(Name ="國別碼")]
